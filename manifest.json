@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+
+    "name": "Reddit Ease",
+    "description": "Ease view for reddit",
+    "version": "1.0",
+
+    "browser_action": {
+        "default_icon": "reddit-logo.png"
+    },
+
+    "content_scripts": [{
+        "matches": ["https://www.reddit.com/*"],
+        "css": ["style.css"],
+        "run_at": "document_end"
+    }],
+
+    "permissions": [
+        "activeTab",
+        "https://www.reddit.com/*",
+        "<all_urls>"
+    ]
+}
